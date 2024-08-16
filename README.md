@@ -75,7 +75,7 @@ resource "yandex_compute_instance" "nat-instance" {
   }
 
   metadata = {
-    ssh-keys = "centos:${var.public_key}"
+    ssh-keys = "centos:${file("id_ed25519.pub")}"
   }
 }
 ```
@@ -110,7 +110,7 @@ resource "yandex_compute_instance" "public-vm" {
   }
 
   metadata = {
-    ssh-keys = "centos:${var.public_key}"
+    ssh-keys = "centos:${file("id_ed25519.pub")}"
   }
 }
 ```
