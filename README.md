@@ -4,11 +4,11 @@
 
 ### 1. Создать пустую VPC. Выбрать зону.
 
-'''
+```
 resource "yandex_vpc_network" "VPC" {
   name = "VPC"
 }
-'''
+```
 
 ![Задание1](https://github.com/SSitkarev/15.1-cloud-network/blob/main/img/1.jpg)
 
