@@ -22,6 +22,6 @@ resource "yandex_vpc_route_table" "nat-route-table" {
 
   static_route {
     destination_prefix = "0.0.0.0/0"
-    next_hop_address   = "192.168.10.254"
+    next_hop_address   = yandex_compute_instance.nat-instance.network_interface.0.ip_address
   }
 }
